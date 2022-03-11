@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    .left-container{
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #000;
+        color: #fff;
+        align-items: center;
+        h1{
+            cursor: pointer;
+        }
+        .settings{
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+    .right-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        .sub-navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #f0e9e9d8;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            .nav-items{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li{
+                    padding: 0.5rem 1rem;
+                    list-style: none;
+                    &:not(:last-child){
+                        border-right: 1px solid #e6e6e6;
+                    }
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        font-weight: normal;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: #00a8ff;
+                        }
+                        &.active{
+                            color: #00a8ff;
+                        }
+                    }
+                }
+            }
+        }
+        .line-filters{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            div{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                height: 3rem;
+                justify-content: space-between;
+            }
+        }
+        #cards{
+            flex-wrap: wrap;
+            .card{
+                margin: 0.5rem;
+                flex:auto;
+            }
+        }
+        #chart{
+            div{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 2fr) minmax(200px, 1fr));
+            }
+        }
+    }
+}
